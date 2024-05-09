@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
 
 return new class extends Migration
 {
@@ -13,8 +14,11 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
+            //$table->string('username');
             $table->string('username');
         });
+        User::create(['username' => 'admin1', 'name' => 'admin','email' => 'admin@themesbrand.com','password' => Hash::make('12345678'),'email_verified_at'=>'2022-01-02 17:04:58','created_at' => now(),]);
+        
     }
 
     /**
