@@ -18,7 +18,6 @@ class UserController extends Controller
     {
         //
         $users = User::all();
-        //dd($users);
         return view('users', ['users' => $users]);
 
     }
@@ -58,11 +57,16 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         //
+        $user = User::findOrFail($id);
+        // Actualizar los datos del usuario
+        $user->type_user = $request->type_user;
+        $user->save();
+        return redirect()->route('users.index')->with('success', 'User updated successfully');
+        
     }
-
     /**
      * Remove the specified resource from storage.
      */

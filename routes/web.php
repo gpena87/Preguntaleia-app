@@ -16,7 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
-Route::get('/users', [App\Http\Controllers\UserController::class, 'index']);
+
+//Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('users.index');
+//Route::put('/users/{user}', [App\Http\Controllers\UserController::class, 'update'])->name('users.update');
+
+Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('users.index');
+Route::put('/users/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('users.update');
+
 Route::get('/', [App\Http\Controllers\HomeController::class, 'root']);
 Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index']);
 //Language Translation

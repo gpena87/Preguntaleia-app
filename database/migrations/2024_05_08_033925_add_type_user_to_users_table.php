@@ -14,9 +14,9 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->string('username');
+            $table->string('type_user')->default(2);
         });
-        //User::create(['username' => 'admin1', 'name' => 'admin','email' => 'admin@themesbrand.com','password' => Hash::make('12345678'),'email_verified_at'=>'2022-01-02 17:04:58','created_at' => now(),]);     
+        User::create(['type_user' => 1, 'username' => 'admin1', 'name' => 'admin','email' => 'admin@themesbrand.com','password' => Hash::make('12345678'),'email_verified_at'=>'2022-01-02 17:04:58','created_at' => now(),]);     
     }
 
     /**
@@ -26,7 +26,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->dropColumn('username');
+            $table->dropColumn('type_user');
         });
     }
 };
