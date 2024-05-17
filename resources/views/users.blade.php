@@ -24,6 +24,7 @@
                                     <th>Email</th>
                                     <th>Type</th>
                                     <th>Edit</th>
+                                    <th>Del</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -40,10 +41,7 @@
                                         <input type="number" name="type_user" value="{{ $user->type_user }}">
                                     </td>
                                     <td style="width: 100px">
-                                        <button type="submit" title="Edit">
-                                        </button>
-                                        <td>
-                                    </td>
+                                        <button type="submit" title="Edit">Editar</button>
                                     </td>
                                 </tr>
                                 </form>
