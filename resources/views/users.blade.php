@@ -29,22 +29,25 @@
                             </thead>
                             <tbody>
                             @foreach ($users as $user)
-                            <form action="{{ route('users.update', $user->id) }}"method="POST">
-                                @csrf
-                                @method('PUT')
                                 <tr data-id="{{ $user->id }}">
                                     <td style="width: 80px">{{ $user->id }}</td>
                                     <td>{{ $user->username }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>
-                                        <input type="number" name="type_user" value="{{ $user->type_user }}">
-                                    </td>
+                                    <form action="{{ route('users.update', $user->id) }}"method="POST">
+                                        <td><input type="number" name="type_user" value="{{ $user->type_user }}"></td>
+                                            @csrf
+                                            @method('PUT')
+                                            <td><button type="submit" title="Edit">Editar</button></td>
+                                    </form>
                                     <td style="width: 100px">
-                                        <button type="submit" title="Edit">Editar</button>
+                                        <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" title="Delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">Eliminar</button>
+                                        </form>
                                     </td>
                                 </tr>
-                                </form>
                             @endforeach
                             </tbody>
                         </table>
