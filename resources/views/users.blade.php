@@ -23,8 +23,8 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Type</th>
-                                    <th>Edit</th>
-                                    <th>Del</th>
+                                    <!-- <th>Edit</th>
+                                    <th>Del</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,7 +34,8 @@
                                     <td>{{ $user->username }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <form action="{{ route('users.update', $user->id) }}"method="POST">
+                                    <td>{{ $user->type_user }}</td>
+                                    <!-- <form action="{{ route('users.update', $user->id) }}"method="POST">
                                         <td><input type="number" name="type_user" value="{{ $user->type_user }}"></td>
                                             @csrf
                                             @method('PUT')
@@ -46,7 +47,7 @@
                                             @method('DELETE')
                                             <button type="submit" title="Delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">Eliminar</button>
                                         </form>
-                                    </td>
+                                    </td> -->
                                 </tr>
                             @endforeach
                             </tbody>
