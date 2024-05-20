@@ -38,7 +38,7 @@
 
                 <li>
                     <a href="{{route('users.index')}}" class=" waves-effect">
-                        <i class="uil-list-ul"></i>
+                        <i class="uil-list-ul"></i><span class="badge rounded-pill bg-primary float-end">01</span>
                         <span>@lang('translation.Users')</span>
                     </a>
                 </li>
