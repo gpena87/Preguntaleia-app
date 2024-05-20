@@ -46,7 +46,7 @@
                     <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-outline-danger waves-effect waves-light w-md">Eliminar</button>
+                        <button type="submit" class="btn btn-primary waves-effect waves-light w-md">Eliminar</button>
                     </form>
                 </div>
             </div>

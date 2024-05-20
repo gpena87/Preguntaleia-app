@@ -23,8 +23,7 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Type</th>
-                                    <!-- <th>Edit</th>
-                                    <th>Del</th> -->
+                                    <th>Edit</th>
                                 </tr>
                             </thead>
                             <tbody>
