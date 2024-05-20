@@ -37,7 +37,7 @@
                 <li class="menu-title">@lang('translation.Menu')</li>
 
                 <li>
-                    <a href="users" class=" waves-effect">
+                    <a href="{{route('users.index')}}" class=" waves-effect">
                         <i class="uil-list-ul"></i>
                         <span>@lang('translation.Users')</span>
                     </a>

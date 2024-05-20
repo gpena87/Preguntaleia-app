@@ -29,7 +29,6 @@
                             <div class="p-2 mt-4">
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
-
                                     <div class="mb-3">
                                         <label class="form-label" for="email">Email</label>
                                         <input type="text" class="form-control @error('email') is-invalid @enderror"

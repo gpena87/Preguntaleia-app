@@ -21,7 +21,6 @@ class UserController extends Controller
         return view('users', ['users' => $users]);
 
     }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -49,9 +48,11 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(User $user)
     {
-        //
+        return view('usersEdit',[
+            'user'=> $user
+        ]);
     }
 
     /**
@@ -63,6 +64,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         // Actualizar los datos del usuario
         $user->type_user = $request->type_user;
+        $user->username = $request->username;
         $user->save();
         return redirect()->route('users.index')->with('success', 'User updated successfully');
         

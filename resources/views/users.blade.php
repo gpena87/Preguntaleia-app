@@ -35,19 +35,7 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->type_user }}</td>
-                                    <!-- <form action="{{ route('users.update', $user->id) }}"method="POST">
-                                        <td><input type="number" name="type_user" value="{{ $user->type_user }}"></td>
-                                            @csrf
-                                            @method('PUT')
-                                            <td><button type="submit" title="Edit">Editar</button></td>
-                                    </form>
-                                    <td style="width: 100px">
-                                        <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" title="Delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">Eliminar</button>
-                                        </form>
-                                    </td> -->
+                                    <td><a href="{{ route('users.edit', $user) }}">Edit</a></td>
                                 </tr>
                             @endforeach
                             </tbody>
