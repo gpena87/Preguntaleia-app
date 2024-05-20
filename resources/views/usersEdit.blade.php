@@ -13,8 +13,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-            <form action="{{ route('users.update', $user->id) }}"method="POST">  
-                <h4 class="card-title">Textual inputs</h4>
+            <form action="{{ route('users.update', $user->id) }}"method="POST">
                 <div class="mb-3 row">
                     <label for="example-text-input" class="col-md-2 col-form-label">User Name</label>
                     <div class="col-md-10">
@@ -39,15 +38,17 @@
                         <input class="form-control" type="number" value="{{$user->type_user}}" name="type_user">
                     </div>
                 </div>
+                <div class="d-flex flex-wrap gap-3 mt-3">
                     @csrf
                     @method('PUT')
-                    <td><button type="submit" title="Edit">Editar</button></td>
-                </form>
-                <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" title="Delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">Eliminar</button>
-                </form>
+                    <button type="submit" class="btn btn-primary waves-effect waves-light w-md">Editar</button>
+                    </form>
+                    <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-outline-danger waves-effect waves-light w-md">Eliminar</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div> <!-- end col -->
