@@ -38,6 +38,7 @@
                         <input class="form-control" type="number" value="{{$user->type_user}}" name="type_user">
                     </div>
                 </div>
+                <br>
                 <div class="d-flex flex-wrap gap-3 mt-3">
                     @csrf
                     @method('PUT')
