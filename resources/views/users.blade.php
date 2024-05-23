@@ -22,7 +22,7 @@
                                     <th>User Name</th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>Type</th>
+                                    <th>Role</th>
                                     <th>Edit</th>
                                 </tr>
                             </thead>
