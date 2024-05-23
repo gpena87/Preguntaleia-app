@@ -50,7 +50,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('usersEdit',[
+        return view('users-edit',[
             'user'=> $user
         ]);
     }
@@ -62,7 +62,6 @@ class UserController extends Controller
     {
         //
         $user = User::findOrFail($id);
-        // Actualizar los datos del usuario
         $user->type_user = $request->type_user;
         $user->username = $request->username;
         $user->save();

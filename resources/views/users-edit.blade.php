@@ -15,6 +15,13 @@
             <div class="card-body">
             <form action="{{ route('users.update', $user->id) }}"method="POST">
                 <div class="mb-3 row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">ID</label>
+                    <div class="col-md-10">
+                        
+                        <label for="example-text-input" class="col-md-2 col-form-label">{{$user->id}}</label>
+                    </div>
+                </div>
+                <div class="mb-3 row">
                     <label for="example-text-input" class="col-md-2 col-form-label">User Name</label>
                     <div class="col-md-10">
                         <input class="form-control" type="text" value="{{$user->username}}" name="username">
@@ -40,6 +47,7 @@
                 </div>
                 <br>
                 <div class="d-flex flex-wrap gap-3 mt-3">
+                    <button href="{{ route('users.edit', $user) }}" class="btn btn-primary waves-effect waves-light w-md">Cancelar</button>
                     @csrf
                     @method('PUT')
                     <button type="submit" class="btn btn-primary waves-effect waves-light w-md">Editar</button>
