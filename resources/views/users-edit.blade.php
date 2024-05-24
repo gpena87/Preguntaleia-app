@@ -42,12 +42,12 @@
                 <div class="mb-3 row">
                     <label for="example-number-input" class="col-md-2 col-form-label">Role</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="number" value="{{$user->type_user}}" name="type_user">
+                        <input class="form-control" type="number" value="{{$user->role_id}}" name="role_id">
                     </div>
                 </div>
                 <br>
                 <div class="d-flex flex-wrap gap-3 mt-3">
-                    <button href="{{ route('users.edit', $user) }}" class="btn btn-primary waves-effect waves-light w-md">Cancelar</button>
+                    <button href="{{ route('users.edit', $user) }}" class="btn btn-primary waves-effect waves-light w-md">Volver</button>
                     @csrf
                     @method('PUT')
                     <button type="submit" class="btn btn-primary waves-effect waves-light w-md">Editar</button>

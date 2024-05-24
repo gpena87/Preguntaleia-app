@@ -62,7 +62,7 @@ class UserController extends Controller
     {
         //
         $user = User::findOrFail($id);
-        $user->type_user = $request->type_user;
+        $user->role_id = $request->role_id;
         $user->username = $request->username;
         $user->save();
         return redirect()->route('users.index')->with('success', 'User updated successfully');

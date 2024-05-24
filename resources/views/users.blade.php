@@ -33,7 +33,7 @@
                                     <td>{{ $user->username }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->type_user }}</td>
+                                    <td>{{ $user->role_id }}</td>
                                     <td><a href="{{ route('users.edit', $user) }}">Edit</a></td>
                                 </tr>
                             @endforeach
